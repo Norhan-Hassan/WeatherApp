@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 50px;
+
+  background: radial-gradient(circle at top left, #1e1b4b, #020617);
+
+  color: white;
+  font-family: system-ui, sans-serif;
+}

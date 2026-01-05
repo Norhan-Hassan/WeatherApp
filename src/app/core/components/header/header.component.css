@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'HeaderFont';
+  src: url('/assets/fonts/BricolageGrotesque-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-dropdown-btn {
+  background-color: #1e1b4b;
+  color: white;
+  border: 1px solid #444;
+  min-width: 200px;
+}
+
+.custom-dropdown-btn:hover,
+.custom-dropdown-btn:focus {
+  background-color: #2a2760;
+  color: white;
+}
+.custom-dropdown-btn.dropdown-toggle::after {
+  display: none;
+}
+
+.custom-dropdown-menu {
+  background-color: #1e1b4b;
+  color: white;
+  border: 1px solid #444;
+  min-width: 200px;
+}
+
+.custom-dropdown-menu .dropdown-item {
+  color: white;
+}
+
+.custom-dropdown-menu .dropdown-item:hover {
+  background-color: #2a2760;
+}
+
+.custom-dropdown-menu .dropdown-header {
+  color: #ccc;
+  font-weight: bold;
+}
+
+.custom-dropdown-menu .dropdown-divider {
+  border-color: #444;
+}
+.phrase {
+  font-family: 'HeaderFont', sans-serif;
+  text-align: center;
+  font-weight: 500;
+}
