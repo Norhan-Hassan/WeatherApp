@@ -1,1 +1,15 @@
-<p>search works!</p>
+<div class="search-wrapper d-flex gap-3">
+  <div class="search-input d-flex align-items-center flex-grow-1">
+    <i class="bi bi-search search-icon"></i>
+
+    <input
+      type="text"
+      class="form-control search-control"
+      placeholder="Search for a place..."
+      [(ngModel)]="city"
+      (keydown.enter)="search()"
+    />
+  </div>
+
+  <button class="btn search-btn" (click)="search()">Search</button>
+</div>

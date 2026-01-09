@@ -1,29 +1,22 @@
 import { Routes } from '@angular/router';
+import { NotFoundComponent } from './features/weather/pages/not-found/not-found.component';
+import { ErrorComponent } from './features/weather/pages/error/error.component';
+import { CurrentWeatherComponent } from './features/weather/components/current-weather/current-weather.component';
+import { DailyForcastComponent } from './features/weather/components/daily-forcast/daily-forcast.component';
+import { HourlyForcastComponent } from './features/weather/components/hourly-forcast/hourly-forcast.component';
 
 export const routes: Routes = [
-  {
-    path: 'weather',
-    loadChildren: () =>
-      import('./features/weather/components/current-weather/current-weather.component').then(
-        (m) => m.CurrentWeatherComponent
-      ),
-  },
-
+  { path: 'weather', component: CurrentWeatherComponent },
+  { path: '', redirectTo: '/weather', pathMatch: 'full' },
   {
     path: 'daily',
-    loadChildren: () =>
-      import('./features/weather/components/daily-forcast/daily-forcast.component').then((m) => m.DailyForcastComponent),
+    component: DailyForcastComponent,
   },
   {
     path: 'hourly',
-    loadChildren: () => import('./features/weather/components/hourly-forcast/hourly-forcast.component').then((m) => m.HourlyForcastComponent),
+    component: HourlyForcastComponent,
   },
-  {
-    path: 'error',
-    loadChildren: () => import('./features/weather/pages/error/error.component').then((m) => m.ErrorComponent),
-  },
-  {
-    path: '**',
-    loadChildren: () => import('./features/weather/pages/not-found/not-found.component').then((m) => m.NotFoundComponent),
-  },
+  { path: 'error', component: ErrorComponent },
+  { path: 'not-found', component: NotFoundComponent },
+  { path: '**', redirectTo: '/not-found' },
 ];

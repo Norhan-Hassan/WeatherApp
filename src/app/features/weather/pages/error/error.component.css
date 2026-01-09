@@ -1,0 +1,45 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  gap: 20px;
+  padding: 20px;
+}
+
+.error-icon {
+  max-width: 50px;
+  width: 100%;
+  height: auto;
+}
+
+.phrase {
+  max-width: 400px;
+  font-size: 16px;
+  color: #555;
+}
+
+.retry-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #1e1b4b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.retry-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.retry-btn:hover {
+  background-color: #3a37a1;
+}

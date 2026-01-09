@@ -1,1 +1,10 @@
-<p>current-weather works!</p>
+<div class="weather-container">
+  <img src="assets/images/bg-today-large.svg" alt="Background" class="bg-image" />
+
+  <div class="weather-overlay">
+    <h2>{{ weatherData?.weather.temperature }} C</h2>
+    <p>City: {{ weatherData?.city }}</p>
+    <p>Wind Speed: {{ weatherData?.weather.windspeed }} km/h</p>
+    <p>Wind Direction: {{ weatherData?.weather.winddirection }}</p>
+  </div>
+</div>
