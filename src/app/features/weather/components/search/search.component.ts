@@ -18,30 +18,6 @@ export class SearchComponent {
 
   constructor(private _searchService: SearchService, private router: Router) {}
 
-  // search() {
-  //   if (!this.city.trim()) return;
-
-  //   this.loading = true;
-  //   this.error = '';
-
-  //   this._searchService.searchCity(this.city).subscribe({
-  //     next: (data) => {
-  //       this.weather = data;
-  //       this.loading = false;
-  //       this.weatherFound.emit(data);
-  //       console.log(data);
-  //     },
-  //     error: (err) => {
-  //       this.loading = false;
-
-  //       if (err.type === 'NOT_FOUND') {
-  //         this.router.navigate(['/not-found']);
-  //       } else if (err.type === 'API_ERROR') {
-  //         this.router.navigate(['/error']);
-  //       }
-  //     },
-  //   });
-  // }
   search() {
     if (!this.city.trim()) return;
 

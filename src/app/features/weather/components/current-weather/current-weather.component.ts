@@ -36,6 +36,7 @@ export class CurrentWeatherComponent {
     this._searchService.searchCity(city).subscribe({
       next: (data) => {
         this.weatherData = data;
+        console.log(data);
         this.loading = false;
       },
       error: (err) => {
